@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ***** */
+/* *FORM */
+/* ***** */
+.newBookForm {
+  font-size: 1.8rem;
+  display: none;
+  width: 24rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 20vh;
+  left: 50vw;
+  margin-left: -12rem;
+  border-radius: 1rem;
+  z-index: 2;
+  background-color: white;
+  text-align: right;
+}
+
+#form {
+  text-align: left;
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+input {
+  outline: none;
+  border-radius: 1.4rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 2.8rem;
+  margin-bottom: 1rem;
+  width: 80%;
+  text-indent: 14px;
+}
+
+input[type='radio'] {
+  height: initial;
+  width: initial;
+}
+
+#cancel,
+#confirm {
+  display: inline-block;
+  padding: 0.5rem;
+  cursor: pointer;
+  margin: 1rem 1rem 0.8rem 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.2s;
+  border-radius: 0.8rem;
+  background: white;
+}
+
+#cancel:hover,
+#confirm:hover {
+  box-shadow: 1px 1px 2px 1px #dcdad7;
+}
+
+#cancel:focus,
+#confirm:focus {
+  outline: none;
+}
+
+/* ******** */
+/** NAV BAR */
+/* ******** */
+nav {
+  display: flex;
+  height: 5.4rem;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background: white;
+  box-shadow: 0 1px 5px 1px #f2f2f2;
+}
+
+/** || HEADING */
+nav h1 {
+  color: #f90c64;
+  margin-right: auto;
+  margin-left: 1rem;
+  font-size: 2.1rem;
+  font-family: 'Rowdies', cursive;
+}
+
+/** || BUTTON */
+.openForm {
+  margin-left: auto;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  padding: 0.6rem;
+  cursor: pointer;
+  background: white;
+  border: 3px solid #1e90da;
+  width: 16rem;
+  height: 4rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  color: #1e90da;
+  font-weight: 800;
+  transition: background 0.2s, border 0.2s, color 0.2s;
+}
+
+.openForm:hover {
+  background: black;
+  border: 3px solid black;
+  color: white;
+}
+
+.openForm:focus {
+  outline: none;
+}
+
+/* ************ */
+/** SUB HEADING */
+/* ************ */
+.sub-heading {
+  position: relative;
+  top: 5.4rem;
+  height: 40vh;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f2f0;
+  margin: 2rem;
+  border-radius: 2rem;
+}
+
+.sub-heading p {
+  padding: 4rem;
+  margin-left: 12rem;
+  margin-right: 12rem;
+  border-radius: 6vw 4vw 8vw 3vw;
+  font-family: 'Ubuntu', sans-serif;
+  background: #e6f4fc;
+}
+
+/* *********** */
+/** BOOK CARDS */
+/* *********** */
+/* TODO
+  - Give each book card a random background color using rgba
+  - Change delete button to an icon
+*/
+.library {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  top: 5.4rem;
+  margin: 1rem 4rem 1rem 4rem;
+  flex-flow: row wrap;
+}
+
+.book {
+  font-size: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 0.5rem;
+  width: 20rem;
+  height: 24rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  background: #f3f2f0;
+  cursor: pointer;
+  transition: box-shadow 0.2s, margin 0.2s;
+}
+
+.book:hover {
+  margin-top: 0.5rem;
+  box-shadow: 0 3px 10px 2px #eeece9;
+}
+
+.title {
+  font-size: 2.4rem;
+  margin-top: 3rem;
+  font-family: 'Rowdies', cursive;
+}
+
+.authur {
+  margin-top: 1rem;
+  font-style: italic;
+  font-family: 'Comic Neue', cursive;
+}
+
+.pages {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  font-style: italic;
+}
+
+.readStatus {
+  width: 8rem;
+  margin-right: 1rem;
+  padding: 0.3rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.2s;
+}
+
+.readStatus:hover {
+  box-shadow: 1px 1px 2px 1px #dcdad7;
+}
+
+.readStatus:focus {
+  outline: none;
+}
+
+.delBook {
+  padding: 0.3rem;
+  cursor: pointer;
+  background: white;
+  color: black;
+  border-radius: 0.5rem;
+  width: 3.4rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.2s;
+}
+
+.delBook:hover {
+  box-shadow: 1px 1px 2px 1px #dcdad7;
+}
+
+.delBook:focus {
+  outline: none;
+}

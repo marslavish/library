@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Library</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>MY LIBRARY</h1>
+        <button class="openForm">Add A New Book</button>
+      </nav>
+      <div class="sub-heading">
+        <p>Track your books in a simple way</p>
+      </div>
+    </header>
+    <main>
+      <div class="newBookForm">
+        <form action="#" id="form">
+          <label for="title">1. Book title:</label><br />
+          <input type="text" name="title" id="formTitle" /><br />
+          <label for="author">2. Author:</label><br />
+          <input type="text" name="author" id="formAuthor" /><br />
+          <label for="pages">3. Number of pages:</label><br />
+          <input type="text" name="pages" id="formPages" /><br />
+          <p>4. Have you read it?</p>
+          <input
+            type="radio"
+            name="readStatus"
+            id="haveRead"
+            value="Have Read"
+          />
+          <label for="haveRead">Yes, I have</label><br />
+          <input type="radio" name="readStatus" id="notRead" value="Not Read" />
+          <label for="notRead">No, I haven't</label>
+        </form>
+        <button id="cancel">Cancel</button>
+        <button id="confirm" type="button">Confirm</button>
+      </div>
+
+      <div class="library"></div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
